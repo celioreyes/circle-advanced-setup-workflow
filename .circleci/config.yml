@@ -168,7 +168,7 @@ orbs:
           - checkout
           - run:
               name: Install yq
-              command: pip install yq
+              command: pip install yq && echo << pipeline.parameters.run-setup >>
           - list-changed-modules:
               modules: << parameters.modules >>
               modules-filtered: << parameters.modules-filtered >>
