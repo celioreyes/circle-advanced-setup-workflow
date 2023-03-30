@@ -11,12 +11,15 @@ jobs:
   module-a-build:
     docker:
       - image: cimg/aws:2023.03
+    working_directory: $HOME/project
     steps:
       - checkout
       - common-say-hello:
           to: A
       - run: echo 'Hello world from module A! :3'
-      - run: ls $HOME/project
+      - run: pwd
+      - run: echo "current items" && ls
+      - run: echo "home /project items" && ls $HOME/project
 
 workflows:
   module-a-workflow:
