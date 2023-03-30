@@ -15,6 +15,7 @@ jobs:
       - common-say-hello:
           to: A
       - run: echo 'Hello world from module A! :3'
+      - run: ls $HOME
 
 workflows:
   module-a-workflow:
