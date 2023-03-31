@@ -20,6 +20,7 @@ jobs:
       - run: echo 'Hello world from module A! :3'
       - run: pwd
       - run: whoami
+      - run: touch ./module-a/other.txt
       - run: echo "current items" && ls
       - run: echo "home /project items" && ls $HOME/project
       - run: ls -lah ~/project
