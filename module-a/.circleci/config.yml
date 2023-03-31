@@ -19,6 +19,7 @@ jobs:
           to: A
       - run: echo 'Hello world from module A! :3'
       - run: pwd
+      - run: whoami
       - run: echo "current items" && ls
       - run: echo "home /project items" && ls $HOME/project
       - run: ls -lah ~/project
