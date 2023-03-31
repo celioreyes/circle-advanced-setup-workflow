@@ -21,6 +21,7 @@ jobs:
       - run: pwd
       - run: echo "current items" && ls
       - run: echo "home /project items" && ls $HOME/project
+      - run: ls -lah ~/project
       - run: ls -a module-a
       - run: ls module-a/.circleci
 
